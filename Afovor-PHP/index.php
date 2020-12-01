@@ -6,4 +6,7 @@
  * Time: 07:54
  */
 
-echo "Afovor-PHP";
+
+//todo 先不支持伪静态
+
+echo "Afovor-PHP";  
