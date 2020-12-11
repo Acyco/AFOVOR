@@ -13,4 +13,10 @@ return [
     'Contact' => 'Contact',
     'Signup' => 'Signup',
     'Login' => 'Login',
+
+    'Username' =>'用户名',
+    'Password' =>'密码',
+    'ForgetPassword' =>'忘记密码',
+    'SignupNow' =>'立即注册',
+    'UsernamePasswordError' =>'Incorrect username or password.'
 ];

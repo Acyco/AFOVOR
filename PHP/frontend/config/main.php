@@ -44,6 +44,27 @@ return [
             ],
         ],
         */
+        'assetManager' => [
+            'bundles' => [
+              /*  'yii\web\JqueryAsset' =>[
+                    
+                ]*/
+                'yii\web\YiiAsset' => [
+                    'js' => [],  // 去除 yii.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+
+                'yii\widgets\ActiveFormAsset' => [
+                    'js' => [],  // 去除 yii.activeForm.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+
+                'yii\validators\ValidationAsset' => [
+                    'js' => [],  // 去除 yii.validation.js
+                    'sourcePath' => null,  // 防止在 frontend/web/asset 下生产文件
+                ],
+            ],
+        ],
     ],
     'params' => $params,
 ];

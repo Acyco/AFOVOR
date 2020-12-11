@@ -9,7 +9,7 @@ html{height: 100%;}
 body.signin {
     background: #18c8f6;
     height: auto;
-    background:url("../img/login-background.jpg") no-repeat center fixed;
+    background:url("../img/login_background2.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -41,11 +41,13 @@ body.signin {
 }
 
 .signinpanel .uname {
-    background: #fff url(../img/user.png) no-repeat 95% center;color:#333;
+    background: #fff url(../img/user.png) no-repeat 5% center;color:#333;
+    padding-left: 40px;
 }
 
 .signinpanel .pword {
-    background: #fff url(../img/locked.png) no-repeat 95% center;color:#333;
+    background: #fff url(../img/locked.png) no-repeat 5% center;color:#333;
+    padding-left: 40px;
 }
 
 .signinpanel .btn {
@@ -70,7 +72,7 @@ body.signin {
     .signinpanel,
     .signuppanel {
         margin: 0 auto;
-        width: 420px!important;
+        width: 360px!important;
         padding: 20px;
     }
     .signinpanel form {

@@ -42,7 +42,7 @@ AppAsset::register($this);
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => \Yii::t('common','Signup'), 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => \Yii::t('common','Login'), 'url' => ['/site/login']];
+        $menuItems[] = ['label' => \Yii::t('common','Login'), 'url' => ['/public/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
