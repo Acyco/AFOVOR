@@ -13,6 +13,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 
+/* @var $model \common\models\LoginForm */
+
 PublicAsset::register($this);
 //$this->title = Yii::t('app', 'Login');
 $this->title = "登录";

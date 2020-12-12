@@ -119,6 +119,7 @@ $(window).bind("load resize", function () {
 });
 
 function NavToggle() {
+    return;
     $('.navbar-minimalize').trigger('click');
 }
 

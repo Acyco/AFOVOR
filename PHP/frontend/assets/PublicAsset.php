@@ -6,12 +6,13 @@
  * Time: 14:32
  */
 namespace frontend\assets;
-class PublicAsset extends \yii\web\AssetBundle
+use yii\web\AssetBundle;
+
+class PublicAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-    
         'css/login.css?v1.0.7',
     ];
     public $depends = [
