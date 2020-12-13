@@ -9,7 +9,9 @@
 namespace frontend\controllers;
 
 
-class ManagerController extends \yii\web\Controller
+use common\components\FrontendController;
+
+class ManagerController extends FrontendController
 {
 
     public function actionIndex()

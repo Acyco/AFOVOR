@@ -7,6 +7,7 @@
  */
 
 use frontend\assets\ManagerAsset;
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 ManagerAsset::register($this);
@@ -44,7 +45,7 @@ $this->title = "管理页面"
                         <span><img alt="image" class="img-circle" src="img/profile_small.jpg" /></span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">Beaut-zihan</strong></span>
+                               <span class="block m-t-xs"><strong class="font-bold"><?= Yii::$app->user->isGuest?"Acyco":Yii::$app->user->getIdentity()->username?></strong></span>
                                 <span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
                                 </span>
                         </a>
@@ -58,7 +59,7 @@ $this->title = "管理页面"
                             <li><a class="J_menuItem" href="mailbox.html">信箱</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="login.html">安全退出</a>
+                            <li><?=Html::a("安全退出",['public/logout']) ?>
                             </li>
                         </ul>
                     </div>
@@ -161,7 +162,7 @@ $this->title = "管理页面"
                         </ul>
                     </li>
                     <li class="hidden-xs">
-                        <a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 菜单</a>
+                        <a href="<?=Url::to(["menu/index"]) ?>" class="J_menuItem" data-index="0"><i class="fa fa-navicon"></i> 菜单</a>
                     </li>
                     <li class="dropdown hidden-xs">
                         <a class="right-sidebar-toggle" aria-expanded="false">
@@ -176,7 +177,7 @@ $this->title = "管理页面"
             </button>
             <nav class="page-tabs J_menuTabs">
                 <div class="page-tabs-content">
-                    <a href="javascript:;" class="active J_menuTab" data-id="<?=Url::toRoute("manager/index") ?>">首页</a>
+                    <a href="javascript:;" class="active J_menuTab" data-id="<?=Url::toRoute("site/index") ?>">首页</a>
                 </div>
             </nav>
             <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
@@ -195,13 +196,14 @@ $this->title = "管理页面"
                     </li>
                 </ul>
             </div>
-            <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+<!--            <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>-->
+            <?=Html::a(Html::tag('i','',['class'=>'fa fa fa-sign-out']).Yii::t('common','Logout'),['public/logout'],['class'=>'roll-nav roll-right J_tabExit']) ?>
         </div>
         <div class="row J_mainContent" id="content-main">
             <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="<?=Url::toRoute("site/index") ?>" frameborder="0" data-id="index_v1.html" seamless></iframe>
         </div>
         <div class="footer">
-            <div class="pull-right">&copy; 2014-2017 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+            <div class="pull-right">&copy; 2020  <a href="http://skin.xygu.cn/" target="_blank">AFOVOR</a>
             </div>
         </div>
     </div>

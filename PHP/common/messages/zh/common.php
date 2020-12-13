@@ -13,6 +13,7 @@ return [
     'Contact' => '联系',
     'Signup' => '注册',
     'Login' => '登录',
+    'Logout' => '退出',
     /** test */
     'Username' =>'用户名',
     'Password' =>'密码',
