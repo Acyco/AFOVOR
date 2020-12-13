@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'language'=>'zh-CN',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -19,6 +20,7 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+            'idParam' => '__frontend_id'
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
@@ -78,6 +80,18 @@ return [
                 ],
             ],
         ],
+        'i18n' => [
+            'translations' => [ //多语言
+                'app*' => [
+                    'class' => yii\i18n\PhpMessageSource::class,
+                    'basePath' => '@frontend/messages',
+                    'fileMap' => [
+                        'afovor' => 'app.php',
+                    ],
+                ],
+            ],
+        ],
+        
     ],
     'params' => $params,
 ];
