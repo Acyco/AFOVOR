@@ -8,7 +8,6 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
-    'language'=>'zh-CN',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -85,8 +84,9 @@ return [
                 'app*' => [
                     'class' => yii\i18n\PhpMessageSource::class,
                     'basePath' => '@frontend/messages',
+                    'sourceLanguage' => 'en-US',
                     'fileMap' => [
-                        'afovor' => 'app.php',
+                        'app' => 'app.php',
                     ],
                 ],
             ],

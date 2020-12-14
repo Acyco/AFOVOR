@@ -164,6 +164,10 @@ $this->title = "管理页面"
                     <li class="hidden-xs">
                         <a href="<?=Url::to(["menu/index"]) ?>" class="J_menuItem" data-index="0"><i class="fa fa-navicon"></i> 菜单</a>
                     </li>
+                    <li>
+                        
+                        <?= Html::a(Yii::t("app",'Registration'),['manager/registration']) ?>
+                    </li>
                     <li class="dropdown hidden-xs">
                         <a class="right-sidebar-toggle" aria-expanded="false">
                             <i class="fa fa-tasks"></i> 主题

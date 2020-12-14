@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 
 use common\components\FrontendController;
+use common\models\Registration;
 
 class ManagerController extends FrontendController
 {
@@ -22,4 +23,22 @@ class ManagerController extends FrontendController
         
     }
 
+
+    public function actionDesktop()
+    {
+        
+    }
+
+
+    public function actionRegistration()
+    {
+        $model = new Registration();
+//        var_dump($model);die;
+        $model->userid = 1;
+        if ($model->save(true)) {
+            echo "成功";
+        } else {
+            echo " fail";
+        }
+    }
 }
