@@ -14,10 +14,11 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/font-awesome.css?v=4.4.0',
         'css/animate.css',
-        'css/style.css',
+//        'css/style.css',
         'css/site.css',
     ];
     public $js = [
+        'https://cdn.bootcss.com/holder/2.9.6/holder.js'
     ];
     public $depends = [
 //        'yii\web\YiiAsset',

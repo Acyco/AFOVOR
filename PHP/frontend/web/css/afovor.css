@@ -1,0 +1,23 @@
+/* acyco add*/
+
+html body{
+    background: #191919!important;
+    color: #777
+}
+
+.navbar{
+    box-shadow: 0 1px 1px 1px rgba(0,0,0,.25);
+}
+
+.navbar-header{
+    width: 200px;
+    height: 50px;
+    background: red;
+}
+
+.navbar-collapse{
+    background: brown;
+    margin-left: 200px;
+    padding:0 20px;
+}
+
